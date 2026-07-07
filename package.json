@@ -1,0 +1,14 @@
+{
+  "name": "shipline",
+  "version": "0.1.0",
+  "description": "Deploy only the Firebase functions your change actually affects. Require-closure analysis, source fingerprinting, and a fail-closed staging watcher — never under-deploys, falls back to full when it can't prove safety.",
+  "main": "src/index.js",
+  "bin": { "shipline": "bin/shipline.js" },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": ["firebase", "deploy", "functions", "cloud-functions", "affected", "incremental", "monorepo", "ci", "watcher", "firebase-tools"],
+  "author": "Gabriel Kerner",
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}

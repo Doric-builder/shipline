@@ -1,0 +1,4 @@
+node_modules/
+.deploy-state/
+*.log
+.DS_Store

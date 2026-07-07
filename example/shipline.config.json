@@ -1,0 +1,21 @@
+{
+  "project": "my-app-staging",
+  "forbidProjects": ["my-app-prod"],
+  "forbidPathPatterns": ["OneDrive", "Dropbox"],
+  "requireInFirebaserc": true,
+  "functionsDir": "functions",
+  "fullThresholdPct": 0.6,
+  "debounceMs": 700,
+  "pollMs": 1000,
+  "deployOnStart": true,
+  "watch": [
+    { "path": "public", "target": "hosting" },
+    { "path": "firestore.rules", "target": "firestore:rules" },
+    { "path": "src/client", "hook": 0 }
+  ],
+  "hooks": {
+    "preDeploy": [
+      { "run": "npm run build", "target": "hosting", "adoptOutputs": ["public/bundle.js", "public/index.html"] }
+    ]
+  }
+}
